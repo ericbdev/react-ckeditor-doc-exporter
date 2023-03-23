@@ -14,8 +14,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": [
+      "@types/ckeditor__ckeditor5-autoformat",
+      "@types/ckeditor__ckeditor5-basic-styles",
+      "@types/ckeditor__ckeditor5-block-quote",
+      "@types/ckeditor__ckeditor5-code-block",
+      "@types/ckeditor__ckeditor5-core",
+      "@types/ckeditor__ckeditor5-editor-classic",
+      "@types/ckeditor__ckeditor5-essentials",
+      "@types/ckeditor__ckeditor5-heading",
+      "@types/ckeditor__ckeditor5-image",
+      "@types/ckeditor__ckeditor5-indent",
+      "@types/ckeditor__ckeditor5-link",
+      "@types/ckeditor__ckeditor5-list",
+      "@types/ckeditor__ckeditor5-ui",
+      "@types/ckeditor__ckeditor5-media-embed",
+      "@types/ckeditor__ckeditor5-paragraph",
+      "@types/ckeditor__ckeditor5-table"
+    ]
   },
-  "include": ["src"],
+  "include": ["./types/*.d.ts", "src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
