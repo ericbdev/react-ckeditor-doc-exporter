@@ -25,3 +25,6 @@ dist-ssr
 
 .env
 !.env.example
+
+dist/
+dist_web/
