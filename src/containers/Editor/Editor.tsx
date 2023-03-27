@@ -1,4 +1,5 @@
 import cx from 'classnames';
+import { useMemo } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import EssentialsPlugin from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -10,6 +11,9 @@ import HeadingPlugin from '@ckeditor/ckeditor5-heading/src/heading';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
 import ListPlugin from '@ckeditor/ckeditor5-list/src/list';
 import ParagraphPlugin from '@ckeditor/ckeditor5-paragraph/src/paragraph';
+
+import Export from './plugins/export';
+import { definitions as exportDefs } from './plugins/export/constants';
 
 function Editor() {
   return (
@@ -26,7 +30,11 @@ function Editor() {
             'numberedList',
             'blockQuote',
             'link',
+            exportDefs.toolbar,
           ],
+          [exportDefs.toolbar]: {
+            isEnabled: true,
+          },
           heading: {
             options: [
               {
@@ -64,6 +72,7 @@ function Editor() {
             LinkPlugin,
             ListPlugin,
             ParagraphPlugin,
+            Export,
           ],
         }}
       />
