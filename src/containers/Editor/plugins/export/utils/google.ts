@@ -11,9 +11,9 @@ class GoogleClient {
     this.initGSI();
   }
 
-  public static getInstance(callback): GoogleClient {
+  public static getInstance(): GoogleClient {
     if (!GoogleClient.instance) {
-      GoogleClient.instance = new GoogleClient(callback);
+      GoogleClient.instance = new GoogleClient();
     }
     return GoogleClient.instance;
   }
@@ -74,7 +74,7 @@ class GoogleClient {
     if (result) {
       console.log(`https://docs.google.com/document/d/${result.id}`);
     } else {
-      console.error('Unable to export to google drive')
+      console.error('Unable to export to google drive');
     }
   }
 }

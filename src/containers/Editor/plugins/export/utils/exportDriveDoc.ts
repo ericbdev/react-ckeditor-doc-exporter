@@ -1,6 +1,14 @@
 import htmlToWord from './htmlToWord';
 
-const exportDriveDoc = async ({ title, data, accessToken }) => {
+const exportDriveDoc = async ({
+  title,
+  data,
+  accessToken,
+}: {
+  title?: string;
+  data: string;
+  accessToken?: string;
+}) => {
   const file = await htmlToWord(data);
 
   const metadata = {

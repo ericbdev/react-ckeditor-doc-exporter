@@ -1,7 +1,3 @@
-export type DriveToolbarConfig = {
-  accessToken: string;
+export type ExportToolbarConfig = {
   isEnabled: boolean;
-  onGoogleAuthorize: () => void;
-  onGoogleRevoke: () => void;
-  onGoogleExport: () => void;
 };

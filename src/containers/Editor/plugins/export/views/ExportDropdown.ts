@@ -13,6 +13,10 @@ import GoogleDocView from './GoogleDocView';
 export default class ExportDropdown extends Plugin {
   init() {
     const editor = this.editor;
+
+    // @types issue
+    // eslint-disable-next-line
+    // @ts-ignore
     editor.ui.componentFactory.add(definitions.toolbar, (locale) => {
       const dropdown = createDropdown(locale);
       dropdown.render();
@@ -50,7 +54,11 @@ export default class ExportDropdown extends Plugin {
     const button = new ButtonView(locale);
     button.set({ label: l18n.dropdown.word.title, withText: true });
     button.on('execute', () => {
-      exportDocx(this.editor.getData());
+      // @types issue
+      // eslint-disable-next-line
+      // @ts-ignore
+      const data = this.editor.getData();
+      exportDocx(data);
     });
 
     return button;

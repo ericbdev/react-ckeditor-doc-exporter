@@ -1,8 +1,11 @@
+import { Editor } from '@ckeditor/ckeditor5-core';
 import { ButtonView, View } from '@ckeditor/ckeditor5-ui';
 import { selectors, l18n } from '../constants';
 import GoogleClient from '../utils/google';
 
 class GoogleDocView extends View {
+  private googleClient: GoogleClient;
+  private editor: Editor;
   constructor(locale, editor) {
     super(locale);
     this.editor = editor;
@@ -37,7 +40,11 @@ class GoogleDocView extends View {
       ),
     });
     button.on('execute', () => {
-      this.googleClient.uploadDoc(this.editor.getData());
+      // @types issue
+      // eslint-disable-next-line
+      // @ts-ignore
+      const data = this.editor.getData();
+      this.googleClient.uploadDoc(data);
     });
 
     return button;

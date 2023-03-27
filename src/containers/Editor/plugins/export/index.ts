@@ -1,10 +1,10 @@
 import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 import ExportDropdown from './views/ExportDropdown';
 import { definitions, l18n } from './constants';
-import { DriveToolbarConfig } from './types';
-import GoogleClient from './utils/google';
+import { ExportToolbarConfig } from './types';
 
-class Drive extends Plugin {
+class Export extends Plugin {
+  private _config: ExportToolbarConfig;
   static get requires() {
     return [ExportDropdown];
   }
@@ -15,14 +15,8 @@ class Drive extends Plugin {
   constructor(editor) {
     super(editor);
 
-    new GoogleClient();
-
-    const config: DriveToolbarConfig = {
-      accessToken: '',
+    const config: ExportToolbarConfig = {
       isEnabled: false,
-      onGoogleAuthorize: () => void 0,
-      onGoogleRevoke: () => void 0,
-      onGoogleExport: () => void 0,
     };
 
     editor.config.define(definitions.toolbar, config);
@@ -31,4 +25,4 @@ class Drive extends Plugin {
   }
 }
 
-export default Drive;
+export default Export;
