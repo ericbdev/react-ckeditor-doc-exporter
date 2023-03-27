@@ -25,8 +25,8 @@ export default defineConfig({
   build: {
     // minify: false,
     // target: "es2015",
-    outDir: 'dist_web',
-    sourcemap: true,
+    outDir: 'dist',
+    sourcemap: false,
     commonjsOptions: { include: [] },
     rollupOptions: {
       plugins: [
