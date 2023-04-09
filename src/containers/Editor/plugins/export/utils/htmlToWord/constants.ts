@@ -1,0 +1,51 @@
+export const mimeType = `application/vnd.openxmlformats-officedocument.wordprocessingml.document`;
+
+const uriOXML = 'http://schemas.openxmlformats.org';
+const uriMS = 'http://schemas.openxmlformats.org';
+
+export const namespaces = {
+  a: `${uriOXML}/drawingml/2006/main`,
+  b: `${uriOXML}/officeDocument/2006/bibliography`,
+  cdr: `${uriOXML}/drawingml/2006/chartDrawing`,
+  chart: `${uriOXML}/drawingml/2006/chart`,
+  contentTypes: `${uriOXML}/package/2006/content-types`,
+  coreProperties: `${uriOXML}/package/2006/metadata/core-properties`,
+  corePropertiesRelation: `${uriOXML}/package/2006/relationships/metadata/core-properties`,
+  dc: `http://purl.org/dc/elements/1.1/`,
+  dcmitype: `http://purl.org/dc/dcmitype/`,
+  dcterms: `http://purl.org/dc/terms/`,
+  dgm: `${uriOXML}/drawingml/2006/diagram`,
+  fontTable: `${uriOXML}/officeDocument/2006/relationships/fontTable`,
+  footers: `${uriOXML}/officeDocument/2006/relationships/footer`,
+  headers: `${uriOXML}/officeDocument/2006/relationships/header`,
+  hyperlinks: `${uriOXML}/officeDocument/2006/relationships/hyperlink`,
+  images: `${uriOXML}/officeDocument/2006/relationships/image`,
+  lc: `${uriOXML}/drawingml/2006/lockedCanvas`,
+  math: `${uriOXML}/officeDocument/2006/math`,
+  numbering: `${uriOXML}/officeDocument/2006/relationships/numbering`,
+  o: `urn:schemas-microsoft-com:office:office`,
+  officeDocumentRelation: `${uriOXML}/officeDocument/2006/relationships/officeDocument`,
+  pic: `${uriOXML}/drawingml/2006/picture`,
+  r: `${uriOXML}/officeDocument/2006/relationships`,
+  relationship: `${uriOXML}/package/2006/relationships`,
+  settingsRelation: `${uriOXML}/officeDocument/2006/relationships/settings`,
+  sl: `${uriOXML}/schemaLibrary/2006/main`,
+  styles: `${uriOXML}/officeDocument/2006/relationships/styles`,
+  themes: `${uriOXML}/officeDocument/2006/relationships/theme`,
+  v: `urn:schemas-microsoft-com:vml`,
+  ve: `${uriOXML}/markup-compatibility/2006`,
+  vt: `${uriOXML}/officeDocument/2006/docPropsVTypes`,
+  w: `${uriOXML}/wordprocessingml/2006/main`,
+  w10: `urn:schemas-microsoft-com:office:word`,
+  w14: `${uriMS}/office/word/2010/wordml`,
+  w15: `${uriMS}/office/word/2012/wordml`,
+  webSettingsRelation: `${uriOXML}/officeDocument/2006/relationships/webSettings`,
+  wne: `${uriMS}/office/word/2006/wordml`,
+  wp: `${uriOXML}/drawingml/2006/wordprocessingDrawing`,
+  wpg: `${uriMS}/office/word/2010/wordprocessingGroup`,
+  wps: `${uriMS}/office/word/2010/wordprocessingShape`,
+  xsd: `http://www.w3.org/2001/XMLSchema`,
+  xsi: `http://www.w3.org/2001/XMLSchema-instance`,
+};
+
+export default namespaces;

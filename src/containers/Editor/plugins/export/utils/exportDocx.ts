@@ -1,11 +1,15 @@
-import htmlToWord from './htmlToWord';
 import download from 'downloadjs';
+import htmlToWord from './htmlToWord';
 
 const exportDocx = async (data) => {
+  const fileName = `download-${Date.now()}.docx`;
   const docx = await htmlToWord(data);
-  const mimeType =
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
-  download(docx, `download.docx`, mimeType);
+
+  download(
+    docx,
+    fileName,
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  );
 };
 
 export default exportDocx;
