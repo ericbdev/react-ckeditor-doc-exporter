@@ -7,7 +7,7 @@ export const l18n = {
   toolbar: { title: 'Export' },
   dropdown: {
     google: {
-      doc: { title: 'Google' },
+      doc: { title: 'Google Docs' },
       authorize: { title: 'Sign in' },
       revoke: { title: 'Sign out' },
     },

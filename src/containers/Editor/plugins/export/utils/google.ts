@@ -72,7 +72,7 @@ class GoogleClient {
     });
     btnTrigger.classList.remove('ck-disabled');
     if (result) {
-      console.log(`https://docs.google.com/document/d/${result.id}`);
+      alert(`https://docs.google.com/document/d/${result.id}`);
     } else {
       console.error('Unable to export to google drive');
     }
